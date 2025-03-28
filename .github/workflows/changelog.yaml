@@ -1,0 +1,13 @@
+name: Generate Changelog
+
+permissions:
+  contents: write
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    uses: 99linesofcode/.github/.github/workflows/changelog.yaml@main
