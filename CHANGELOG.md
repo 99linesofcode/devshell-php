@@ -1,4 +1,18 @@
-# 0.1.0 (2025-03-28)
+# [0.2.0](https://github.com/99linesofcode/devshell-php/compare/v0.1.0...v0.2.0) (2025-04-18)
+
+
+### Bug Fixes
+
+* **xdebug:** start on trigger to prevent warnings in CLI output ([9c71b94](https://github.com/99linesofcode/devshell-php/commit/9c71b944ba58464df989a0ff90e6d1d1ed4fecc0))
+
+
+### Features
+
+* **phpactor:** install the language server locally ([552df09](https://github.com/99linesofcode/devshell-php/commit/552df0910c27a7e709177984666feabcd02db83c))
+
+
+
+# [0.1.0](https://github.com/99linesofcode/devshell-php/compare/e04b53bcf6d56350c9c26c19015afa575f99863d...v0.1.0) (2025-03-28)
 
 
 ### Features
