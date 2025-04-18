@@ -47,6 +47,7 @@
               markdownlint-cli2
               nodePackages.nodejs
               nodePackages.pnpm
+              phpactor
               phpEnv
               phpEnv.packages.composer
               vale
