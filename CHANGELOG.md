@@ -1,3 +1,12 @@
+## [0.2.1](https://github.com/99linesofcode/devshell-php/compare/v0.2.0...v0.2.1) (2025-04-18)
+
+
+### Bug Fixes
+
+* **composer:** expose global bin directory for running laravel/installer ([dfc7347](https://github.com/99linesofcode/devshell-php/commit/dfc73476c64b025c27b46c57949efd9539f8f58a))
+
+
+
 # [0.2.0](https://github.com/99linesofcode/devshell-php/compare/v0.1.0...v0.2.0) (2025-04-18)
 
 
