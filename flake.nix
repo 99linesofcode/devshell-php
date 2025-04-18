@@ -36,8 +36,8 @@
               ])
             );
             extraConfig = ''
-              xdebug.mode=debug
-              xdebug.start_with_request=yes
+              xdebug.mode = debug
+              xdebug.start_with_request = trigger
             '';
           };
         in
