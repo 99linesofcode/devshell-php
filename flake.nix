@@ -57,6 +57,7 @@
             ];
 
             shellHook = ''
+              export PATH="$(composer global config home)/vendor/bin:$PATH"
               export PATH="$PWD/node_modules/.bin/:$PATH"
             '';
           };
