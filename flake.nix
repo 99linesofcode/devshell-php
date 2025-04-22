@@ -55,9 +55,9 @@
           default = mkShell {
             packages = [
               markdownlint-cli2
+              nodePackages.intelephense
               nodePackages.nodejs
               nodePackages.pnpm
-              phpactor
               phpEnv
               phpEnv.packages.composer
               vale
