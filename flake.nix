@@ -18,6 +18,15 @@
         "x86_64-linux"
       ];
 
+      pkgsForSystem =
+        system: nixpkgsSource:
+        import nixpkgsSource {
+          inherit system;
+          config.allowUnfree = true;
+          overlays = [
+          ];
+        };
+
       forEachSystem = f: nixpkgs.lib.genAttrs systems f;
     in
     {
@@ -25,9 +34,9 @@
 
       devShells = forEachSystem (
         s:
-        with nixpkgs.legacyPackages.${s};
         let
-          phpEnv = php.buildEnv {
+          pkgs = pkgsForSystem s nixpkgs;
+          phpEnv = pkgs.php.buildEnv {
             extensions = (
               { enabled, all }:
               enabled
@@ -41,13 +50,14 @@
             '';
           };
         in
+        with pkgs;
         {
           default = mkShell {
             packages = [
               markdownlint-cli2
+              nodePackages.intelephense
               nodePackages.nodejs
               nodePackages.pnpm
-              phpactor
               phpEnv
               phpEnv.packages.composer
               vale
