@@ -1,3 +1,12 @@
+# [0.3.0](https://github.com/99linesofcode/devshell-php/compare/v0.2.1...v0.3.0) (2025-05-19)
+
+
+### Features
+
+* **nix:** allow unfree packages ([20f043a](https://github.com/99linesofcode/devshell-php/commit/20f043a5782ca2380355b5828113f68c4d36f1b2))
+
+
+
 ## [0.2.1](https://github.com/99linesofcode/devshell-php/compare/v0.2.0...v0.2.1) (2025-04-18)
 
 
