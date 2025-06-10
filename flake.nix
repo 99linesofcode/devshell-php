@@ -54,6 +54,7 @@
         {
           default = mkShell {
             packages = [
+              nixfmt-rfc-style
               markdownlint-cli2
               nodePackages.intelephense
               nodePackages.nodejs
