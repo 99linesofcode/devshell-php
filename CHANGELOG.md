@@ -1,3 +1,12 @@
+## [0.3.1](https://github.com/99linesofcode/devshell-php/compare/v0.3.0...v0.3.1) (2025-06-10)
+
+
+### Bug Fixes
+
+* **nix:** make sure nixfmt is installed in case it's not present by default ([55a6d33](https://github.com/99linesofcode/devshell-php/commit/55a6d3392c637ccd869914595787482256879fdf))
+
+
+
 # [0.3.0](https://github.com/99linesofcode/devshell-php/compare/v0.2.1...v0.3.0) (2025-05-19)
 
 
