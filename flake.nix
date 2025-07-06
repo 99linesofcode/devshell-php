@@ -3,11 +3,13 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs23.url = "github:nixos/nixpkgs/nixos-23.05";
   };
 
   outputs =
     {
       nixpkgs,
+      nixpkgs23,
       ...
     }@inputs:
     let
@@ -22,7 +24,13 @@
         system: nixpkgsSource:
         import nixpkgsSource {
           inherit system;
-          config.allowUnfree = true;
+          config = {
+            allowUnfree = true;
+            permittedInsecurePackages = [
+              "nodejs-14.21.3"
+              "openssl-1.1.1w"
+            ];
+          };
           overlays = [
           ];
         };
@@ -36,7 +44,8 @@
         s:
         let
           pkgs = pkgsForSystem s nixpkgs;
-          phpEnv = pkgs.php.buildEnv {
+          pkgs23 = pkgsForSystem s nixpkgs23;
+          phpEnv = pkgs.php83.buildEnv {
             extensions = (
               { enabled, all }:
               enabled
@@ -54,13 +63,23 @@
         {
           default = mkShell {
             packages = [
+              # Nix
+              nil
               nixfmt-rfc-style
+
+              # Markdown
               markdownlint-cli2
+
+              # NodeJS
               nodePackages.intelephense
-              nodePackages.nodejs
-              nodePackages.pnpm
+              pkgs23.nodejs_14
+              # nodePackages.pnpm
+
+              # PHP
               phpEnv
               phpEnv.packages.composer
+
+              # Prose
               vale
               valeStyles.alex
               valeStyles.google
