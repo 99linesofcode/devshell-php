@@ -59,6 +59,7 @@
               nodePackages.intelephense
               nodePackages.nodejs
               nodePackages.pnpm
+              nodePackages.jsonlint
               phpEnv
               phpEnv.packages.composer
               vale
