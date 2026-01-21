@@ -54,15 +54,16 @@
         {
           default = mkShell {
             packages = [
+              hadolint # docker
               nixfmt-rfc-style
-              markdownlint-cli2
+              markdownlint-cli2 # markdown
               nodePackages.intelephense
               nodePackages.nodejs
               nodePackages.pnpm
-              nodePackages.jsonlint
+              nodePackages.jsonlint # json
               phpEnv
               phpEnv.packages.composer
-              vale
+              vale # prose
               valeStyles.alex
               valeStyles.google
               valeStyles.proselint
