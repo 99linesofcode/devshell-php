@@ -63,6 +63,7 @@
               nodePackages.jsonlint # json
               phpEnv
               phpEnv.packages.composer
+              phpEnv.packages.phpstan
               vale # prose
               valeStyles.alex
               valeStyles.google
