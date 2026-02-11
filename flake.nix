@@ -64,6 +64,7 @@
               phpEnv
               phpEnv.packages.composer
               phpEnv.packages.phpstan
+              sqlite
               vale # prose
               valeStyles.alex
               valeStyles.google
