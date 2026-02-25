@@ -61,6 +61,7 @@
               nodePackages.nodejs
               nodePackages.pnpm
               nodePackages.jsonlint # json
+              playwright # NOTE: this must match the version of playwright installed in pnpm. figure out how to properly link these.
               phpEnv
               phpEnv.packages.composer
               phpEnv.packages.phpstan
@@ -74,6 +75,9 @@
             shellHook = ''
               export PATH="$(composer global config home)/vendor/bin:$PATH"
               export PATH="$PWD/node_modules/.bin/:$PATH"
+              export PLAYWRIGHT_BROWSERS_PATH=${playwright.browsers}
+              export PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS=true
+              export PLAYWRIGHT_HOST_PLATFORM_OVERRIDE="ubuntu-24.04"
             '';
           };
         }
