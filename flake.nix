@@ -35,6 +35,7 @@
           inherit system;
           config.allowUnfree = true;
           overlays = [
+            # (final: prev: { nodejs = prev.nodejs_20; })
           ];
         };
 
