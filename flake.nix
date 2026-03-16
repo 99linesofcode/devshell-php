@@ -69,19 +69,22 @@
               hadolint # docker
               nixfmt-rfc-style
               markdownlint-cli2 # markdown
+              nodePackages.eslint
               nodePackages.intelephense
               nodePackages.nodejs
               nodePackages.pnpm
-              nodePackages.jsonlint # json
+              nodePackages.stylelint
               playwright # NOTE: this must match the version of playwright installed in pnpm. figure out how to properly link these.
               phpEnv
               phpEnv.packages.composer
-              phpEnv.packages.phpstan
+              phpstan
+              shellcheck-minimal
               sqlite
               vale # prose
               valeStyles.alex
               valeStyles.google
               valeStyles.proselint
+              yamllint
             ];
 
             shellHook = ''
