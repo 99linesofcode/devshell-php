@@ -1,4 +1,4 @@
-# Devshell PHP
+# devshell-php
 
 A nix flake based development environment for Laravel with `PNPM` and `Xdebug` support. The goal is to package everything relevant for running your development environment. Installing packages, running a front-end watcher, linters, formatters, composer, etc. Everything else should be abstracted away into dedicated Docker containers so as to match production as closely as possible.
 
@@ -10,7 +10,7 @@ To use `devshell-php` and assuming you are using `nix-direnv`:
 
 1. Add it as a git submodule `git submodule add https://github.com/99linesofcode/devshell-php ./devshell`
 1. Define a `.envrc` in your project root folder `echo use flake ./devshell >> .envrc`
-3. Run `direnv allow`
+1. Run `direnv allow`
 1. Add `.direnv/` to your `.gitignore`
 
 ## Contributing
