@@ -14,6 +14,10 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -43,6 +47,14 @@
     in
     {
       formatter = forEachSystem (s: nixpkgs.legacyPackages.${s}.nixfmt);
+
+      packages = forEachSystem (s: {
+        programs.nixvim.plugins.lint.lintersByFt = {
+          javascript = [ "eslint" ];
+          php = [ "phpstan" ];
+          typescript = [ "eslint" ];
+        };
+      });
 
       devShells = forEachSystem (
         s:
