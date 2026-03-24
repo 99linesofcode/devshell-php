@@ -69,11 +69,8 @@
               hadolint # docker
               nixfmt-rfc-style
               markdownlint-cli2 # markdown
-              nodePackages.eslint
-              nodePackages.intelephense
               nodePackages.nodejs
               nodePackages.pnpm
-              nodePackages.stylelint
               playwright # NOTE: this must match the version of playwright installed in pnpm. figure out how to properly link these.
               phpEnv
               phpEnv.packages.composer
