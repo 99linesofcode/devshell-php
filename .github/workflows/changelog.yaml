@@ -1,0 +1,10 @@
+name: changelog
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  changelog:
+    uses: 99linesofcode/.github/.github/workflows/changelog.yaml@main
