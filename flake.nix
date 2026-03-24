@@ -42,7 +42,7 @@
       forEachSystem = f: nixpkgs.lib.genAttrs systems f;
     in
     {
-      formatter = forEachSystem (s: nixpkgs.legacyPackages.${s}.nixfmt-rfc-style);
+      formatter = forEachSystem (s: nixpkgs.legacyPackages.${s}.nixfmt);
 
       devShells = forEachSystem (
         s:
@@ -67,7 +67,7 @@
           default = mkShell {
             packages = [
               hadolint # docker
-              nixfmt-rfc-style
+              nixfmt
               markdownlint-cli2 # markdown
               nodePackages.nodejs
               nodePackages.pnpm
