@@ -1,4 +1,4 @@
-name: Generate Changelog and Release
+name: Generate Changelog
 
 on:
   push:
@@ -6,5 +6,5 @@ on:
       - main
 
 jobs:
-  deploy:
+  generate:
     uses: 99linesofcode/.github/.github/workflows/changelog.yaml@main
