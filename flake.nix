@@ -78,6 +78,7 @@
         {
           default = mkShell {
             packages = [
+              actionlint
               nodePackages.intelephense
               nodePackages.nodejs
               nodePackages.pnpm
@@ -86,6 +87,7 @@
               phpEnv
               phpEnv.packages.composer
               phpstan
+              shellcheck
             ];
 
             shellHook = ''
